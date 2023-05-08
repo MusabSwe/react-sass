@@ -1,5 +1,7 @@
 @import './variables.scss';
 
+// to remove all margins and spaces in the window
+// which solves the scroll and component display out the page
 * {
     box-sizing: border-box;
     margin: 0;
