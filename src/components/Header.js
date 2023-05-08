@@ -14,7 +14,9 @@ const Header = () => {
         height: undefined,
     });
 
+    // to receive width and height of the window
     useEffect(() => {
+        console.log("1st useEffect");
         const handleResize = () => {
             setSize({
                 width: window.innerWidth,
@@ -26,8 +28,13 @@ const Header = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    // below the function for checking window size 
+    // when the side menu opened if the size change to the full screen 
+    // the side menue disappear
     useEffect(() => {
+        // means the side menu is opened and the width greater than mobile phones
         if (size.width > 768 && menuOpen) {
+            // remove side menu
             setMenuOpen(false);
         }
     }, [size.width, menuOpen]);
@@ -68,10 +75,10 @@ const Header = () => {
                             </Link>
                         </li>
                     </ul>
-                    <button>CTA Page</button>
+                    <button onClick={ctaClickHandler}>CTA Page</button>
                 </nav>
                 <div className={classes.header__content__toggle}>
-                    {menuOpen ? <BiMenuAltRight onClick={menuToggleHandler} /> : <AiOutlineClose onClick={menuToggleHandler} />}
+                    {menuOpen ? <AiOutlineClose onClick={menuToggleHandler} /> : <BiMenuAltRight onClick={menuToggleHandler} />}
                 </div>
             </div>
         </header>
