@@ -51,7 +51,7 @@ const Header = () => {
     return (
         <header className={classes.header}>
             <div className={classes.header__content}>
-                <Link to="/" className={classes.header__content__logo}>
+                <Link to="/" className={`${classes.header__content__logo} ${classes.logo}`}>
                     navbar
                 </Link>
                 <nav

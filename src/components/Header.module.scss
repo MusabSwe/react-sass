@@ -1,5 +1,13 @@
 @import "../styles/variables.scss";
 
+.logo {
+    margin-left: 0px;
+
+    @include breakpoint(md) {
+        margin-left: 1rem; 
+    }
+}
+
 .header {
     background: $dark;
     width: 100%;
@@ -8,6 +16,7 @@
 
     @include breakpoint(md) {
         padding: 0;
+        margin: 0;
     }
 
     transition: 0.3s ease all;
@@ -29,6 +38,7 @@
             font-weight: bold;
             text-decoration: none;
             color: $light;
+            // margin-left: 1rem;
         }
 
         &__nav {
@@ -111,6 +121,7 @@
                 color: $dark;
                 border: 1px solid transparent;
                 transition: 0.3s ease all;
+                margin-right: 1rem;
 
                 &:hover {
                     border-color: $primary;
