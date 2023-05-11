@@ -14,7 +14,7 @@ const Header = () => {
         height: undefined,
     });
 
-    // to receive width and height of the window
+    // to receive width and height of the window (x,y)
     useEffect(() => {
         console.log("1st useEffect");
         const handleResize = () => {

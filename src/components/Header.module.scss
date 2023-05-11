@@ -82,9 +82,11 @@
                 }
 
                 li {
+                    // defalut in moblie screens
                     &:not(:last-child) {
                         margin-bottom: $spacing-lg;
 
+                        // Labtop Screens
                         @include breakpoint(md) {
                             margin-bottom: 0;
                             margin-right: $spacing-md;

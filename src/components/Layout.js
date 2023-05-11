@@ -8,6 +8,7 @@ const Layout = (props) => {
             <Header />
 
             <div className={classes.container}>
+                {/* the content for each page */}
                 {props.children}
             </div>
         </>
